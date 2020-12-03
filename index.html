@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title>ADV-C78 FAMILY BOOK</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1>My Family Book</h1>
+        <br>
+        <br>
+        <h3 id="label">FamilyBook</h3>
+        <img id="album" src="FamilyBook.jfif">
+        <br>
+        <button type="button" onclick="nextslide()">Next</button>
+    </body>
+    <script>
+        var image= [
+  "mummy.jfif",
+  "papa.jpg",
+  "me.jpg",
+];
+var i=0;
+function nextslide() {
+  document.getElementById("album").src=image[i];
+  i++;
+  if(i == 3)
+  {
+    i=0;
+  };
+  var labels= [
+  "Siddharth",
+  "Dimple Saini",  
+  "Raj Saini",
+  ];
+  document.getElementById("label").innerHTML=labels[i];
+  i++;
+  if(i == 3)
+  {
+    i=0;
+  };
+}
+    </script>
+</html>
